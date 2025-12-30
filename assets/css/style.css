@@ -144,3 +144,29 @@ body {
 .instagram { background: linear-gradient(145deg, #833ab4, #fd1d1d); }
 .youtube { background: linear-gradient(145deg, #ff0000, #cc0000); }
 .discord { background: linear-gradient(145deg, #5865f2, #404eed); }
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile .avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(199, 125, 255, 0.9);
+}
+
+.profile h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
