@@ -96,3 +96,51 @@ body {
   transform: translateY(-10px) rotateX(10deg);
   box-shadow: 0 20px 40px rgba(199, 125, 255, 0.7);
 }
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 80px auto;
+  perspective: 1200px;
+}
+
+.social-card {
+  height: 140px;
+  background: linear-gradient(145deg, #5a189a, #7b2cbf);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 25px 50px rgba(157, 78, 221, 0.5);
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.25), transparent);
+  transform: translateZ(20px);
+}
+
+.social-card span {
+  transform: translateZ(40px);
+}
+
+.social-card:hover {
+  transform: rotateX(15deg) rotateY(-15deg) translateY(-12px);
+  box-shadow: 0 40px 80px rgba(199, 125, 255, 0.8);
+}
+
+/* Platformų spalvų akcentai */
+.twitch { background: linear-gradient(145deg, #6441a5, #7d5bbe); }
+.instagram { background: linear-gradient(145deg, #833ab4, #fd1d1d); }
+.youtube { background: linear-gradient(145deg, #ff0000, #cc0000); }
+.discord { background: linear-gradient(145deg, #5865f2, #404eed); }
